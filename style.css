@@ -1,0 +1,438 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: url("assets/bg.jpg");
+  background-color: rgb(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+}
+
+#container {
+  margin: auto;
+  width: 1000px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: #999;
+  align-items: center;
+}
+
+.faceb {
+  background: rgb(58, 79, 138);
+  border-bottom: 3px solid rgba(177, 175, 175, 0.5);
+  width: 55px;
+  height: 60px;
+  text-align: center;
+  padding-top: 12px;
+  margin: 0 5px 0;
+  font-size: 28px;
+}
+
+.wifi {
+  background: rgb(196, 130, 51);
+  border-bottom: 3px solid rgba(177, 175, 175, 0.5);
+  width: 55px;
+  height: 60px;
+  text-align: center;
+  padding-top: 12px;
+  margin: 0 5px 0 0;
+  font-size: 28px;
+}
+
+.twit {
+  background: rgb(94, 132, 190);
+  border-bottom: 3px solid rgba(177, 175, 175, 0.5);
+  width: 55px;
+  height: 60px;
+  text-align: center;
+  padding-top: 12px;
+  margin: 0 5px 0 0;
+  font-size: 28px;
+}
+
+.youtube {
+  background: rgb(168, 46, 44);
+  border-bottom: 3px solid rgba(177, 175, 175, 0.5);
+  width: 55px;
+  height: 60px;
+  text-align: center;
+  padding-top: 12px;
+  margin: 0 5px 0 0;
+  font-size: 28px;
+}
+
+.dot {
+  height: 1px;
+  width: 1px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 2px;
+  margin-left: 10px;
+  margin-bottom: 3.5px;
+}
+.sub {
+  order: -1;
+  padding-right: 50px;
+  border-right: 5px dotted white;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 46px;
+  padding-top: 13px;
+  color: #bbb;
+}
+
+.siteNav {
+  list-style: none;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.siteNav > li {
+  padding-top: 10px;
+  height: 40px;
+  width: 240px;
+  background-color: rgb(169, 31, 44);
+  text-align: center;
+  border-bottom: 4px solid rgba(177, 175, 175, 0.9);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.line {
+  font-size-adjust: 10px; /* cant seem to get the dashed lines to stretch... */
+}
+
+.mainimage {
+  background: url("assets/top-image.png");
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: -221px -121px;
+  border: 8px white solid;
+  height: 373px;
+  width: auto;
+  margin: auto;
+}
+
+.mainimage > img {
+  position: absolute;
+  top: 255px;
+  right: 792px;
+  height: 246px;
+  width: 350px;
+}
+
+.grid {
+  position: absolute;
+}
+
+.grid > img {
+  position: absolute;
+  height: 359px;
+  top: 7px;
+  width: 985px;
+  left: 7px;
+  opacity: 0.5;
+}
+
+.news {
+  display: grid;
+  grid-template-areas: "story1 story2 story3";
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.news h1 {
+  font-size: 24px;
+  font-family: "Lucida Sans Unicode", "Lucdia Grande", sans-serif;
+  font-weight: 150;
+  color: rgb(70 70 70);
+  padding: 0 15px;
+  margin-top: 15px;
+}
+
+.news h6 {
+  font-size: 13px;
+  font-family: "Lucida Sans Unicode", "Lucdia Grande", sans-serif;
+  color: rgb(70 70 70);
+  padding: 0 15px;
+  margin: 0px;
+  opacity: 0.4;
+}
+
+.news p {
+  font-size: 12px;
+  font-family: "Lucida Sans Unicode", "Lucdia Grande", sans-serif;
+  font-weight: 150;
+  color: rgb(70 70 70);
+  padding: 0 15px;
+  line-height: 2.4;
+}
+
+.news span {
+  display: flex;
+  justify-content: center;
+}
+
+.story1,
+.story2,
+.story3 {
+  width: 310px;
+  background: white;
+}
+
+.story1 {
+  grid-area: story1;
+}
+
+.story2 {
+  grid-area: story2;
+}
+
+.story3 {
+  grid-area: story3;
+}
+
+a {
+  color: rgb(166, 33, 44);
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.skateboarders {
+  display: grid;
+  grid-template-areas:
+    "sk1 sk2 sk3"
+    "sk4 sk4 sk3";
+  justify-content: space-between;
+  position: relative;
+  padding-top: 30px;
+}
+
+.arrow {
+  position: absolute;
+  background: rgb(169, 31, 44);
+  color: white;
+  top: 95px;
+  left: -199px;
+  height: 46px;
+  width: 159px;
+  text-align: center;
+  padding-top: 14px;
+  border-bottom: 3px solid gray;
+}
+
+.arrow::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 24px 0 23px 27px;
+  border-color: transparent transparent transparent rgb(169, 31, 44);
+  bottom: -3px;
+  left: 159px;
+}
+
+.skateboarders h3 {
+  color: white;
+  text-align: center;
+  font-size: 42px;
+  font-family: "Lucida Sans Unicode", "Lucdia Grande", sans-serif;
+}
+
+.steve {
+  grid-area: sk4;
+  background: url("assets/sk8er-1.png");
+  width: 660px;
+  height: 228px;
+  position: absolute;
+  top: 18px;
+  padding-top: 45px;
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: 0px -90px;
+  border: 5px white solid;
+}
+
+.tommy {
+  grid-area: sk3;
+  background: url("assets/sk8er-2.png");
+  width: 285px;
+  height: 447px;
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: -423px -11px;
+  padding-top: 110px;
+  border: 5px white solid;
+}
+
+.rodney {
+  grid-area: sk2;
+  background: url("assets/sk8er-3.png");
+  width: 315px;
+  height: 200px;
+  position: absolute;
+  right: -143px;
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: -6px -21px;
+  border: 5px white solid;
+}
+
+.lance {
+  grid-area: sk1;
+  background: url("assets/sk8er-4.png");
+  width: 315px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: -145px -12px;
+  border: 5px white solid;
+}
+
+.skateboards {
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  padding: 20px 0;
+  margin: 28px 0;
+}
+
+footer {
+  display: grid;
+  grid-template-areas:
+    "contact name"
+    "lorem name"
+    "icons name"
+    ". submit";
+  background: white;
+  position: relative;
+  padding: 25px 25px;
+}
+
+.fb {
+  background: rgb(79, 79, 79);
+  height: 27px;
+  width: 25px;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 6px;
+  color: #999;
+  margin: 0 4px;
+}
+
+.wf {
+  background: rgb(174, 174, 174);
+  height: 27px;
+  width: 25px;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 6px;
+  color: #999;
+  margin: 0 4px;
+}
+
+.tw {
+  background: rgb(123, 123, 123);
+  height: 27px;
+  width: 25px;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 6px;
+  color: #999;
+  margin: 0 4px;
+}
+
+.yt {
+  background: rgb(117, 117, 117);
+  height: 27px;
+  width: 25px;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 6px;
+  color: #999;
+  margin: 0 4px;
+}
+
+footer > h3 {
+  grid-area: contact;
+  margin: 0;
+  font-size: 28px;
+  margin-bottom: -32px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(77, 77, 77);
+}
+
+footer > p {
+  grid-area: lorem;
+  width: 440px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(77, 77, 77);
+  line-height: 1.6;
+}
+
+footer > .socialMedia {
+  display: flex;
+  grid-area: icons;
+  margin-top: -25px;
+}
+
+footer > textfield {
+  display: flex;
+  flex-direction: column;
+  width: 365px;
+  grid-area: name;
+}
+
+#name {
+  padding: 10px 10px;
+  border-top: 4px solid gray;
+  border-left: 3px solid gray;
+}
+
+#email {
+  padding: 10px 10px;
+  margin-top: 15px;
+  border-top: 4px solid gray;
+  border-left: 3px solid gray;
+}
+
+textfield > textarea {
+  padding: 5px 10px 40px 10px;
+  margin-top: 15px;
+  border-top: 4px solid gray;
+  border-left: 3px solid gray;
+  resize: none;
+}
+
+textfield > button {
+  width: 176px;
+  margin-left: 190px;
+  margin-top: 15px;
+  background: rgb(169, 31, 44);
+  color: white;
+  font-size: 16px;
+  border: 0;
+  padding: 7px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
